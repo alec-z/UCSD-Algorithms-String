@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class InverseBWT {
+public class KnuthMorrisPratt {
     class FastScanner {
         StringTokenizer tok = new StringTokenizer("");
         BufferedReader in;
@@ -23,21 +23,31 @@ public class InverseBWT {
         }
     }
 
-    String inverseBWT(String bwt) {
-        StringBuilder result = new StringBuilder();
-
-        // write your code here
-
-        return result.toString();
+    // Find all the occurrences of the pattern in the text and return
+    // a list of all positions in the text (starting from 0) where
+    // the pattern starts in the text.
+    public List<Integer> findPattern(String pattern, String text) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        // Implement this function yourself
+        return result;
     }
 
     static public void main(String[] args) throws IOException {
-        new InverseBWT().run();
+        new KnuthMorrisPratt().run();
+    }
+
+    public void print(List<Integer> x) {
+        for (int a : x) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
     }
 
     public void run() throws IOException {
         FastScanner scanner = new FastScanner();
-        String bwt = scanner.next();
-        System.out.println(inverseBWT(bwt));
+        String pattern = scanner.next();
+        String text = scanner.next();
+        List<Integer> positions = findPattern(pattern, text);
+        print(positions);
     }
 }
